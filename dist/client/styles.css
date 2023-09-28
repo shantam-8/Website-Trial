@@ -1,0 +1,178 @@
+@font-face {
+    font-family: "JuliusSansOne";
+    src: url("JuliusSansOne-Regular.ttf");
+    }
+
+@font-face {
+    font-family: "Garamound";
+    src: url("CormorantGaramond-Regular.ttf");
+    }
+
+
+@font-face {
+    font-family: "Quicksand-Light";
+    src: url("Quicksand-Light.ttf");
+    }
+    
+@import url('https://fonts.googleapis.com/css2?family=Hanuman&display=swap');
+
+
+
+html {
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(120vh);
+    scroll-snap-type: y mandatory;
+  }
+
+body {
+    overflow-x: hidden;
+    margin: 0 auto;
+    font-family: monospace;
+    color: rgb(255, 255, 255);
+}
+
+canvas {
+    position: fixed;
+    /* z-index: 1; */
+}
+
+main {
+    /* background-color: cadetblue; */
+    width: 100vw;
+    height: 200vw;
+    z-index: 99;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+}
+
+section {
+    /* background-color: cadetblue; */
+    width: 100vw;
+    min-height: 100vh;
+    padding: 20px;
+    font-size: 4vh;
+    scroll-snap-align: start;
+}
+
+#scrollProgress {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 99;
+    font-size: 3vh;
+}
+
+
+
+.landing-page-section-intro__content{
+    position: absolute;
+    text-align: left;
+    font-family: "JuliusSansOne", sans-serif;
+    font-size: 40px;
+    display: block;
+    top: 9em;
+    left: 29em;
+    
+    .landing-page-section-intro__text-simple{
+        color: white;
+    }
+    
+    .landing-page-section-intro__text-colored{
+        color: yellow;
+    }
+}
+
+
+.landing-page-section-purpose__content{
+    position: relative;
+    text-align: center;
+    text-justify: auto;
+    display: block;
+    margin-left: 2em;
+    margin-right: 4em;
+    width: fit-content;
+    
+    .landing-page-section-purpose__text-heading{
+        font-family: "JuliusSansOne", sans-serif;
+        font-size: 40px;
+    }
+    
+    .landing-page-section-purpose__text-para{
+        font-family: 'Quicksand-Light', sans-serif;
+        font-size: 24px;
+    }
+}
+
+
+.card {
+    box-shadow: 0px 4px 8px 0px #BDBDBD;
+}
+
+.profile-pic {
+    width: 100px !important;
+    height: 100px;
+    box-shadow: 0px 4px 8px 0px #BDBDBD;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+    background: 0 0;
+    color: #1E88E5 !important;
+    border: none;
+    padding: 5px 20px !important;
+    font: inherit;
+    font-size: 50px !important;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover, .owl-carousel .owl-nav button.owl-prev:hover {
+    color: #0D47A1 !important;
+    background-color: transparent !important;
+}
+
+.owl-dots {
+    display: none; 
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+.item {
+    display: none;
+}
+
+.next {
+    display: block !important;
+    position: relative;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    opacity: 0.6;
+}
+
+.prev {
+    display: block !important;
+    position: relative;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    opacity: 0.6;
+}
+
+.item.show {
+    display: block;
+    transition-duration: 0.4s;
+}
+
+@media screen and (max-width: 999px) {
+    .next, .prev {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .item {
+        display: block !important;
+    }
+}
